@@ -1,0 +1,488 @@
+/* Imported Google Fonts */
+@import url("https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Montserrat:wght@400;700&display=swap");
+
+/* Global styles */
+:root {
+  --black: #0d0d0d;
+  --whitish: #f2f2f2;
+  --teal: #7abfbf;
+  --blue: rgba(122, 191, 191, 0.5);
+  --orange: #eb5428;
+  --NavA: 20px;
+  --NavSpan: 20px;
+  --menuLI: 20px;
+  --socialLi: 20px;
+  --footerLI: 20px;
+  --fontFamilyBebas: "Bebas Neue";
+  --fontFamilyMons: "Montserrat";
+}
+
+* {
+  box-sizing: border-box;
+}
+p {
+  font-weight: 400;
+}
+body {
+  background-color: var(--blue);
+  font-family: "Montserrat";
+}
+main {
+  width: 95%;
+  margin: auto;
+  max-width: 414px;
+  background: var(--whitish);
+}
+
+/* NAVIGATION */
+nav {
+  position: relative;
+  height: 150px;
+}
+header {
+  display: grid;
+  grid-template-columns: 100px auto 100px;
+}
+
+header div {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 0.5rem;
+  background: #fff;
+}
+header div svg {
+  color: var(--orange);
+  stroke: var(--orange);
+}
+header span{
+    font-family: var(--fontFamilyBebas);
+}
+.logo svg {
+  stroke: var(--whitish);
+}
+.logo {
+  background: var(--orange);
+}
+
+.input-div {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  left: 0;
+  display: flex;
+  flex-direction: row;
+  background-color: transparent;
+  padding: 0 2rem;
+}
+.input-div svg {
+  background: var(--orange);
+  stroke: var(--whitish);
+}
+.input-div input {
+  flex: 1;
+  height: 2.5rem;
+  outline: var(--orange);
+}
+.input-div input:active {
+  border: solid var(--orange);
+}
+.nav-links {
+  display: none;
+}
+/* Menu Section */
+.menu h1 {
+  font-family: var(--fontFamilyBebas);
+  text-align: center;
+  font-size: 40px;
+}
+
+.icon-con {
+  padding: 0.5rem;
+  display: flex;
+  font-family: var(--fontFamilyBebas);
+  justify-content: space-between;
+}
+
+.icon-con div {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: var(--orange);
+  font-size: 20px;
+}
+
+.image-con {
+  overflow: hidden;
+  background: url("./images/street-tacos.png");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 1000px;
+  width: 100%;
+}
+
+.menu-desc {
+  font-size: 16px;
+  padding: 0.5rem;
+  font-weight: 400;
+  line-height: 1.3rem;
+}
+
+.menu-details,
+.menu-ingredients {
+  padding: 0.5rem;
+}
+.menu-details h1,
+.menu-ingredients h1,
+.menu-direction h1 {
+  margin: 0;
+}
+
+.menu-details ul {
+  margin: 0;
+  padding: 0;
+}
+.menu-details li {
+  list-style-type: none;
+  margin: 0.5rem 0;
+}
+.menu-details li span {
+  text-transform: capitalize;
+  font-weight: 700;
+  margin-right: 1rem;
+}
+
+.menu-ingredients ul {
+  padding: 0 1rem;
+  margin: 0;
+}
+
+.menu-ingredients li {
+  margin: 0.5rem 0;
+  list-style-type: square;
+}
+
+.menu-direction ol {
+  padding: 0 1.5rem;
+  margin: 0;
+}
+
+.menu-direction li {
+  margin: 1rem 0;
+}
+
+.dishes {
+  background: var(--teal);
+}
+
+.card {
+  display: flex;
+  justify-content: flex-start;
+  margin: 1rem;
+  gap: 1rem;
+}
+
+.card img {
+  width: 30%;
+  height: 40%;
+}
+
+.card-footer h2 {
+  margin: 0;
+  text-transform: uppercase;
+  font-family: var(--fontFamilyBebas);
+}
+
+.card-footer p {
+  margin-bottom: 0;
+}
+.card-footer h3 {
+  text-transform: capitalize;
+  margin-top: 0.5rem;
+}
+
+footer {
+  margin-top: 1rem;
+  background-color: #fff;
+}
+footer ul {
+  padding: 0.5rem;
+  display: flex;
+  font-family: var(--fontFamilyBebas);
+  justify-content: space-between;
+  padding-top: 2rem;
+}
+
+footer li {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: var(--orange);
+  font-size: 20px;
+}
+
+.footer-image-con {
+  background-image: url("./images/taco-cheesington.png");
+  height: 270px;
+  width: 270px;
+  margin: auto;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+footer h2 {
+  text-transform: uppercase;
+  font-family: var(--fontFamilyBebas);
+  text-align: center;
+  width: 50%;
+  margin: 1rem auto;
+  display: block;
+}
+
+@media screen and (min-width: 600px) {
+  main {
+    max-width: 768px;
+  }
+  nav {
+    background-color: #fff;
+    position: relative;
+    height: 200px;
+  }
+  .hamburger {
+    display: none;
+  }
+  .input-div {
+    position: inherit;
+    padding: 0;
+    margin-right: 1rem;
+  }
+  header {
+    display: flex;
+    justify-content: space-between;
+  }
+  .avatar {
+    width: 60%;
+    flex-direction: row;
+  }
+
+  .nav-links {
+    position: absolute;
+    display: flex;
+    justify-content: space-between;
+    bottom: 0;
+    width: 100%;
+    padding: 0 0.7rem;
+  }
+  .nav-links li {
+    list-style: none;
+  }
+
+  .nav-links a {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+    font-family: var(--fontFamilyBebas);
+    color: var(--orange);
+  }
+  .nav-links img {
+    width: 50px;
+    height: 50px;
+  }
+  .menu h1 {
+    text-align: left;
+    padding: 0 1rem;
+    margin: 1rem 0;
+  }
+  .icon-con {
+    background-image: linear-gradient(
+      to bottom right,
+      var(--whitish),
+      #fff,
+      #fff,
+      var(--whitish)
+    );
+    padding: 0.5rem 4rem;
+    gap: 1rem;
+  }
+  .menu-details {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  .menu-details ul {
+    width: 100%;
+  }
+  .menu-details li {
+    text-align: center;
+  }
+  .ingredient-direction {
+    display: flex;
+  }
+  .menu-ingredients {
+    padding-top: 0;
+  }
+  .menu-direction h1 {
+    text-align: center;
+  }
+  .dishes h1 {
+    text-align: center;
+    grid-column-start: 1;
+    grid-column-end: 3;
+    grid-row-start: 1;
+    grid-row-end: 1;
+  }
+  .dishes {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1rem 0.5rem;
+    padding-bottom: 1rem;
+  }
+  .card img {
+    width: 30%;
+    height: 100%;
+  }
+  .card {
+    margin: 0;
+  }
+  .card-footer {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+  .card-footer div {
+    display: flex;
+    align-items: center;
+  }
+  .card-footer h3 {
+    margin: 0;
+    margin-right: 0.5rem;
+  }
+
+  footer {
+    padding: 2rem;
+    padding-bottom: 1.5rem;
+    margin-top: 0;
+  }
+  footer ul {
+    float: right;
+    width: 50%;
+    padding: 0;
+  }
+  .footer-image-con {
+    margin: 0;
+  }
+  footer h2 {
+    width: 270px;
+    margin: 1rem 0;
+    padding: 0 3rem;
+  }
+}
+
+@media screen and (min-width: 900px) {
+  main {
+    max-width: 1280px;
+  }
+  nav {
+    background-color: transparent;
+  }
+  header {
+    background: #fff;
+  }
+  .nav-links {
+    position: inherit;
+    width: 70%;
+  }
+  .input-div {
+    position: absolute;
+    width: 30%;
+    left: 35%;
+  }
+  .avatar {
+    width: fit-content;
+  }
+  .top {
+    display: grid;
+    grid-template-columns: 87px 1fr 1fr;
+  }
+  .top h1 {
+    text-align: center;
+    grid-column-start: 1;
+    grid-column-end: 4;
+    grid-row-start: 1;
+    grid-row-end: 1;
+  }
+  .icon-con {
+    flex-direction: column;
+    justify-content: flex-start;
+    padding: 1rem;
+    padding-top: 2rem;
+    gap: 2rem;
+    background: #fff;
+    border: solid 1px #eb5428;
+  }
+  .image-con {
+    height: 800px;
+  }
+  .menu-desc {
+    line-height: 2rem;
+  }
+  .menu-details {
+    background: var(--black);
+    color: var(--teal);
+    padding: 0 2rem;
+  }
+  .menu-details span{
+    margin-right: 0 !important;
+  }
+  .menu-details ul {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+  .menu-details li {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  .ingredient-direction{
+    gap: 0 3rem;
+  }
+  .dishes {
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    gap: 0 2rem;
+    padding: 1rem 2rem;
+  }
+  .dishes h1 {
+    grid-column-start: 1;
+    grid-column-end: 5;
+  }
+  .card {
+    flex-direction: column;
+  }
+  .card img {
+    width: 100%;
+  }
+  .card p{
+    margin: .5rem 0;
+  }
+  footer dl {
+    display: flex;
+  }
+footer h2{
+    padding: 0;
+    width: 150px;
+}
+.footer-image-con {
+  width: 200px;
+  height: 200px;
+  }
+}
